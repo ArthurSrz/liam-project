@@ -22,10 +22,10 @@ logger.warning(
 
 if __name__ == "__main__":
     query = """
-Hello I am Paul Iusztin.
+Hi, I am Arthur Sarazin.
         
-Could you draft an article paragraph discussing RAG? 
-I'm particularly interested in how to design a RAG system.
+What is code ? 
+I am particularly interested by code.
 """
 
     retriever = VectorRetriever(query=query)

@@ -27,17 +27,17 @@ local-stop: # Stop your local Docker infrastructure.
 
 local-test-medium: # Make a call to your local AWS Lambda (hosted in Docker) to crawl a Medium article.
 	curl -X POST "http://localhost:9010/2015-03-31/functions/function/invocations" \
-	  	-d '{"user": "Paul Iusztin", "link": "https://medium.com/decodingml/an-end-to-end-framework-for-production-ready-llm-systems-by-building-your-llm-twin-2cc6bb01141f"}'
+	  	-d '{"user": "Arthur Sarazin", "link": "https://medium.com/@SrzArthur/linstinct-de-connaissance-pour-une-approche-nieztsch%C3%A9enne-de-la-recherche-3c31a089809e"}'
 
 local-test-github: # Make a call to your local AWS Lambda (hosted in Docker) to crawl a Github repository.
 	curl -X POST "http://localhost:9010/2015-03-31/functions/function/invocations" \
-	  	-d '{"user": "Paul Iusztin", "link": "https://github.com/decodingml/llm-twin-course"}'
+	  	-d '{"user": "ArthurSrZ", "link": "https://github.com/ArthurSrz/athletes-paris2024"}'
 
 local-ingest-data: # Ingest all links from data/links.txt by calling your local AWS Lambda hosted in Docker.
 	while IFS= read -r link; do \
 		echo "Processing: $$link"; \
 		curl -X POST "http://localhost:9010/2015-03-31/functions/function/invocations" \
-			-d "{\"user\": \"Paul Iusztin\", \"link\": \"$$link\"}"; \
+			-d "{\"user\": \"Arthur Sarazin\", \"link\": \"$$link\"}"; \
 		echo "\n"; \
 		sleep 2; \
 	done < data/links.txt

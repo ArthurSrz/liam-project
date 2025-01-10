@@ -14,8 +14,8 @@ class Settings(BaseSettings):
     MONGO_DATABASE_NAME: str = "twin"
 
     # Optional LinkedIn credentials for scraping your profile
-    LINKEDIN_USERNAME: str | None = None
-    LINKEDIN_PASSWORD: str | None = None
+    LINKEDIN_USERNAME: str 
+    LINKEDIN_PASSWORD: str 
 
 
 settings = Settings()

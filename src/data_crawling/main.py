@@ -4,13 +4,14 @@ from aws_lambda_powertools import Logger
 from aws_lambda_powertools.utilities.typing import LambdaContext
 from core import lib
 from core.db.documents import UserDocument
-from crawlers import CustomArticleCrawler, GithubCrawler, LinkedInCrawler
+from crawlers import CustomArticleCrawler, GithubCrawler, LinkedInCrawler, MediumCrawler
 from dispatcher import CrawlerDispatcher
 
 logger = Logger(service="llm-twin-course/crawler")
 
 _dispatcher = CrawlerDispatcher()
-_dispatcher.register("medium", CustomArticleCrawler)
+_dispatcher.register("medium", MediumCrawler)
+_dispatcher.register("custom_article", CustomArticleCrawler)
 _dispatcher.register("linkedin", LinkedInCrawler)
 _dispatcher.register("github", GithubCrawler)
 
@@ -33,7 +34,7 @@ def handler(event, context: LambdaContext | None = None) -> dict[str, Any]:
 
 if __name__ == "__main__":
     event = {
-        "user": "Paul Iuztin",
-        "link": "https://www.linkedin.com/in/vesaalexandru/",
+        "user": "Arthur Sarazin",
+        "link": "https://www.linkedin.com/in/arthursarazin/",
     }
     handler(event, None)
