@@ -11,7 +11,7 @@ class Settings(BaseSettings):
     # CometML config
     COMET_API_KEY: str | None = None
     COMET_WORKSPACE: str | None = None
-    COMET_PROJECT: str = "llm-twin"
+    COMET_PROJECT: str = "liam-project"
 
     # Embeddings config
     EMBEDDING_MODEL_ID: str = "BAAI/bge-small-en-v1.5"

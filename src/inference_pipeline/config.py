@@ -36,11 +36,11 @@ class Settings(BaseSettings):
     # CometML config
     COMET_API_KEY: str
     COMET_WORKSPACE: str
-    COMET_PROJECT: str = "llm-twin"
+    COMET_PROJECT: str = "liam-project"
 
     # LLM Model config
     HUGGINGFACE_ACCESS_TOKEN: str | None = None
-    MODEL_ID: str = "pauliusztin/LLMTwin-Llama-3.1-8B" # Change this with your Hugging Face model ID to test out your fine-tuned LLM
+    MODEL_ID: str = "ArthurSrz/LLMTwin-Llama-3.1-8B" # Change this with your Hugging Face model ID to test out your fine-tuned LLM
     DEPLOYMENT_ENDPOINT_NAME: str = "twin"
 
     MAX_INPUT_TOKENS: int = 1536  # Max length of input text.
@@ -48,7 +48,7 @@ class Settings(BaseSettings):
     MAX_BATCH_TOTAL_TOKENS: int = 2048  # Limits the number of tokens that can be processed in parallel during the generation.
 
     # AWS Authentication
-    AWS_REGION: str = "eu-central-1"
+    AWS_REGION: str = "eu-north-1"
     AWS_ACCESS_KEY: str | None = None
     AWS_SECRET_KEY: str | None = None
     AWS_ARN_ROLE: str | None = None

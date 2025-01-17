@@ -34,7 +34,7 @@ class AppSettings(BaseSettings):
     # CometML config
     COMET_API_KEY: str | None = None
     COMET_WORKSPACE: str | None = None
-    COMET_PROJECT: str = "llm-twin"
+    COMET_PROJECT: str = "liam-project"
 
     # AWS Authentication
     AWS_REGION: str = "eu-central-1"
@@ -44,7 +44,7 @@ class AppSettings(BaseSettings):
 
     # LLM Model config
     HUGGINGFACE_ACCESS_TOKEN: str | None = None
-    MODEL_ID: str = "pauliusztin/LLMTwin-Llama-3.1-8B"
+    MODEL_ID: str = "ArthurSrz/LLMTwin-Llama-3.1-8B"
     DEPLOYMENT_ENDPOINT_NAME: str = "twin"
 
     MAX_INPUT_TOKENS: int = 1536  # Max length of input text.
