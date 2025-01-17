@@ -17,10 +17,10 @@ class Settings(BaseSettings):
     COMET_WORKSPACE: str | None = None
     COMET_PROJECT: str | None = None
 
-    DATASET_ID: str = "articles-instruct-dataset"  # Comet artifact containing your fine-tuning dataset (available after generating the instruct dataset).
+    DATASET_ID: str = "arthursrz/articles-instruct-dataset"  # Comet artifact containing your fine-tuning dataset (available after generating the instruct dataset).
 
     # AWS config
-    AWS_REGION: str = "eu-central-1"
+    AWS_REGION: str = "eu-north-1"
     AWS_ACCESS_KEY: str | None = None
     AWS_SECRET_KEY: str | None = None
     AWS_ARN_ROLE: str | None = None
