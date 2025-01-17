@@ -22,10 +22,10 @@ logger.warning(
 
 if __name__ == "__main__":
     query = """
-Hello I am Arthur Sarazin.
+Bonjour Je suis Arthur Sarazin.
         
-Could you draft an article paragraph discussing Data ? 
-I'm particularly interested in how to design Human-Data Interactions.
+Est-ce que tu peux drafter un article qui parle des donnes ?
+Je m'intéresse particulièrement aux interactions Homme-Données.
 """
 
     retriever = VectorRetriever(query=query)

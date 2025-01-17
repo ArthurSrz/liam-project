@@ -15,7 +15,7 @@ class Settings(BaseSettings):
     # Comet config
     COMET_API_KEY: str | None = None
     COMET_WORKSPACE: str | None = None
-    COMET_PROJECT: str = "llm-twin"
+    COMET_PROJECT: str | None = None
 
     DATASET_ID: str = "articles-instruct-dataset"  # Comet artifact containing your fine-tuning dataset (available after generating the instruct dataset).
 
